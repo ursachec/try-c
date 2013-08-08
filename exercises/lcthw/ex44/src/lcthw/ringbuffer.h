@@ -34,7 +34,7 @@ bstring RingBuffer_gets(RingBuffer *buffer, int amount);
 
 #define RingBuffer_full(B) (RingBuffer_available_data((B)) - (B)->length == 0)
 
-#define RingBuffer_empty(B) (RingBugger_available_data((B)) == 0)
+#define RingBuffer_empty(B) (RingBuffer_available_data((B)) == 0)
 
 #define RingBuffer_puts(B, D) RingBuffer_write( (B), bdata((D)), blength((D)) )
 
@@ -49,24 +49,3 @@ bstring RingBuffer_gets(RingBuffer *buffer, int amount);
 #define RingBuffer_commit_write(B, A) ((B)->end = ((B)->end + (A)) % (B)->length)
 
 #endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
